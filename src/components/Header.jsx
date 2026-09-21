@@ -1,4 +1,12 @@
-export default function Header(){
+import logo from "./../assets/logo.png"
+export default function Header() {
     console.log("Header Component")
-    return(<h1>This is heading component</h1>)
+    return (<header>
+        <img
+            className="logo"
+            src= {logo}
+            alt="chef-claude-logo"
+        />
+        <h1>Chef Claude</h1>
+    </header>)
 }
