@@ -13,27 +13,6 @@ You are an assistant that receives a list of ingredients that a user has and sug
 // serverless architecture where your API calls can be made.
 // Doing so will keep your API keys private.
 
-// const anthropic = new Anthropic({
-// // Make sure you set ANTHROPIC_API_KEY in your local .env file
-// apiKey: process.env.ANTHROPIC_API_KEY,
-
-// dangerouslyAllowBrowser: true,
-// })
-
-// export async function getRecipeFromChefClaude(ingredientsArr) {
-// const ingredientsString = ingredientsArr.join(", ")
-
-// const msg = await anthropic.messages.create({
-// model: "claude-3-haiku-20240307",
-// max_tokens: 1024,
-// system: SYSTEM_PROMPT,
-// messages: [
-//             { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
-//         ],
-//     });
-// return msg.content[0].text
-// }
-
 // Make sure you set HF_ACCESS_TOKEN in your local .env file
 const hf = new InferenceClient(import.meta.env.VITE_HF_ACCESS_TOKEN)
 
