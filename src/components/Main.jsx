@@ -1,10 +1,10 @@
 import React from "react"
-import ClaudeRecipe from "./ClaudeRecipe"
 import IngredientsList from "./IngredientsList"
 import { getRecipeFromLlama } from "../../ai.js"
+import LlamaRecipe from "./LlamaRecipe.jsx"
 export default function Main() {
 
-    const [ingredients, setIngredients] = React.useState(["tomato", "oregano", "cheese", "milk"])
+    const [ingredients, setIngredients] = React.useState([])
     const [recipe, setRecipe] = React.useState("")
 
     function addIngredient(formData) {
@@ -33,8 +33,8 @@ export default function Main() {
                 ingredients = {ingredients}
                 getRecipe={getRecipe}
             /> : null}
-            
-            {recipe? <ClaudeRecipe recipe={recipe}/> : null}
+
+            {recipe? <LlamaRecipe recipe={recipe}/> : null}
         </main>
     )
 }

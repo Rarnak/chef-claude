@@ -4,8 +4,8 @@ export default function Header() {
         <img
             className="logo"
             src= {logo}
-            alt="chef-claude-logo"
+            alt="chef-llama-logo"
         />
-        <h1>Chef Claude</h1>
+        <h1>Chef Llama</h1>
     </header>)
 }
