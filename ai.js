@@ -20,7 +20,7 @@ export async function getRecipeFromLlama(ingredientsArr) {
 const ingredientsString = ingredientsArr.join(", ")
 try {
 const response = await hf.chatCompletion({
-model: "meta-llama/Llama-3.1-8B-Instruct",
+model: "deepseek-ai/DeepSeek-V4-Pro",
 messages: [
                 { role: "system", content: SYSTEM_PROMPT },
                 { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
